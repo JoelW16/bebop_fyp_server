@@ -102,8 +102,8 @@ function drawScreen() {
     canvas.height = height;
 
     if(selectMode == 5){
-        //drawMenu();
-        settingsMode();
+        drawMenu();
+        //settingsMode();
     }else if (selectMode == 0){
         mapMode();
     }else if (selectMode == 1){
