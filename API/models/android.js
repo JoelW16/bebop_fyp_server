@@ -10,7 +10,8 @@ var myoSchema = new mongoose.Schema({
     latitude: Number,
     accuracy: Number,
     connected: Boolean,
-    pos: String
+    command: Number
+
 });
 
 module.exports = restful.model('Android', myoSchema);

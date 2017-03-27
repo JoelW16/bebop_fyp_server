@@ -22,6 +22,10 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
+io.on('connection', function(socket){
+    io.emit('connected');
+});
+
 app.use('/api', require('./routes/api'));
 
 //404 Page
@@ -34,8 +38,25 @@ module.exports.updateDrone = function(json) {
     io.emit('updateDrone', json);
 };
 
+
+module.exports.emgLanding = function(json) {
+    io.emit('emgLanding', json);
+};
+
+module.exports.takeoff = function(json) {
+    io.emit('takeoff', json);
+};
+
+module.exports.landing = function(json) {
+    io.emit('landing', json);
+};
+
 module.exports.updateMyo = function(json) {
     io.emit('updateMyo', json);
+};
+
+module.exports.updateDronePos = function(json) {
+    io.emit('updateDronePos', json);
 };
 
 module.exports.updateAndroid = function(json) {
