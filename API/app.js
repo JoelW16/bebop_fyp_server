@@ -6,7 +6,7 @@ var io = require('socket.io')(server);
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var googleMapsClient = require('@google/maps').createClient({
-    key: 'AIzaSyBsxXIzFDUhxAb70xQSoV2ZihEWm2kbMOc'
+    key: 'INSERT KEY'
 });
 
 mongoose.connect('mongodb://localhost/rest_test');
