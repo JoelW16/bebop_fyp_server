@@ -1,5 +1,6 @@
 /**
- * Created by jw479 on 02/03/2017.
+ * @file Something
+ * @author Joel Walker
  */
 // Dependencies
 var restful = require('node-restful');

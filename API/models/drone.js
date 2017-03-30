@@ -1,3 +1,7 @@
+/**
+ * @file Something
+ * @author Joel Walker
+ */
 // Dependencies
 var restful = require('node-restful');
 var mongoose = restful.mongoose;

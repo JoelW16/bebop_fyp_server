@@ -1,3 +1,7 @@
+/**
+ * @file Processes all put and get requests
+ * @author Joel Walker
+ */
 // Dependencies
 var express = require('express');
 var router = express.Router();
@@ -22,6 +26,10 @@ Android.methods(['get', 'put']);
 Tour.methods(['get', 'put']);
 
 
+/**
+ * Checks if position of android device is within 5m of tour node
+ * @param androidReq
+ */
 function checkPos(androidReq){
     console.log("CHECK");
 
@@ -57,7 +65,14 @@ function checkPos(androidReq){
         });
     }
 }
-
+/**
+ * Function calculates distance in km
+ * @param lat1
+ * @param lon1
+ * @param lat2
+ * @param lon2
+ * @returns {number}
+ */
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
     var R = 6371; // Radius of the earth in km
     var dLat = deg2rad(lat2-lat1);  // deg2rad below

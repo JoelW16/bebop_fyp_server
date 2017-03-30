@@ -1,3 +1,8 @@
+/**
+ * @file Something
+ * @author Joel Walker
+ */
+
 // app.js
 var express = require('express');
 var app = express();
